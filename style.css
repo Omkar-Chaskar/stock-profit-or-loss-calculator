@@ -1,20 +1,48 @@
-
-body{
+body {
     width: 100%;
     margin: auto;
+    margin-top: 15rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(25, 129, 143, 0.767);
     transition: 0.3s;
-    width: 90%;
-    max-width: 700px;
+    background-image: url(./Image/white-background.jpg);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
-  
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-  
-.container{
+
+.container {
     padding: 2rem 16px;
+}
+
+.container-input {
+    padding-top: 2rem;
+}
+
+label {
+    margin-bottom: 1rem;
+}
+
+input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.btn-submit {
+    border-radius: 0.4rem;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(25, 129, 143, 0.767);
+    padding: 0.3rem;
+    margin-top: 5px;
+}
+
+.container-msg {
+    margin-top: 1rem;
+    color: rgba(36, 13, 243, 0.76);
+    font-size: larger;
+    font-weight: bold;
 }
