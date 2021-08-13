@@ -14,24 +14,17 @@ form.addEventListener("submit",function clickHandler(e){
     let cP = Number(curPrice.value);
     console.log(typeof purPrice.value , quantity.value ,curPrice.value)
     if(inputSection.value > 0){
-        
-        
-        if(isNaN(purPrice) === true){
-            console.log("NaN value found")
-            
-        }
+
         console.log(pP , qnt ,cP)
         
         if (pP > cP) {
-            let loss = (purPrice - curPrice) * quantity;
-            let perLoss = ((purPrice - curPrice)*100)/purPrice ;
-            console.log(typeof loss , perLoss ,"%")
-            msg.innerHTML ="You are in Loss."
+            let loss = ((pP - cP) * qnt).toFixed(2);
+            let perLoss = (((pP - cP)*100)/pP).toFixed(2);
+            msg.innerHTML ="You lost "+`${perLoss}`+"% loss. Your total loss is "+`${loss}` +".";
         } else {
-            let profit = (curPrice - purPrice) * quantity;
-            let perProfit = ((purPrice -curPrice)*100)/curPrice ;
-            console.log(profit , perProfit.toFixed(2) ,"%")
-            msg.innerHTML ="You are in profit."
+            let profit = ((cP - pP) * qnt).toFixed(2);
+            let perProfit = (((cP - pP)*100)/pP).toFixed(2);
+            msg.innerHTML ="You gained "+`${perProfit}`+"% profit. Your total profit is "+`${profit}` +".";
         }
     }else{
         msg.innerHTML = "Please enter values greater than Zero."
